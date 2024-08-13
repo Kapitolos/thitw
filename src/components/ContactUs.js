@@ -17,7 +17,7 @@ function ContactUs({ show, handleClose }) {
                 Phone: +1 416-760-7041<br/>
                 Email: theholeinthewallto@gmail.com
               </p>
-              <img src="/map.jpg" alt="Map" className="img-fluid" />
+              <img src="map.jpg" alt="Map" className="img-fluid" />
             </Col>
           </Row>
         </Container>
