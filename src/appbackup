@@ -1,0 +1,61 @@
+import React, { useState } from 'react';
+import NavigationBar from './components/Navbar';
+import Hero from './components/Hero';
+import MenuSection from './components/MenuSection';
+import MenuSelector from './components/MenuSelector';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
+import VerticalColumn from './components/VerticalColumn'; // Import the new component
+import './App.css';
+
+function App() {
+  const [showMenuSelector, setShowMenuSelector] = useState(false);
+  const [showMenuSection, setShowMenuSection] = useState('');
+  const [showAbout, setShowAbout] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+
+  const handleShowMenuSelector = () => setShowMenuSelector(true);
+  const handleCloseMenuSelector = () => setShowMenuSelector(false);
+
+  const handleShowAbout = () => setShowAbout(true);
+  const handleCloseAbout = () => setShowAbout(false);
+
+  const handleShowContact = () => setShowContact(true);
+  const handleCloseContact = () => setShowContact(false);
+
+  const handleSelectSection = (section) => {
+    setShowMenuSelector(false);
+    setShowMenuSection(section);
+  };
+
+  const handleCloseMenuSection = () => setShowMenuSection('');
+
+  return (
+    <div className="App">
+      <NavigationBar 
+        onMenuClick={handleShowMenuSelector} 
+        onAboutClick={handleShowAbout} 
+        onContactClick={handleShowContact} 
+      />
+      <div className="main-layout">
+                  <VerticalColumn /> 
+                  <div className="content-area">
+      <Hero 
+        onMenuClick={handleShowMenuSelector} 
+        onAboutClick={handleShowAbout}
+      />
+      </div>
+      </div>
+      <MenuSelector show={showMenuSelector} handleClose={handleCloseMenuSelector} onSelectSection={handleSelectSection} />
+      {showMenuSection === 'appetizers' && <MenuSection show={true} handleClose={handleCloseMenuSection} section="appetizers" />}
+      {showMenuSection === 'pizzas' && <MenuSection show={true} handleClose={handleCloseMenuSection} section="pizzas" />}
+      {showMenuSection === 'dinner' && <MenuSection show={true} handleClose={handleCloseMenuSection} section="dinner" />}
+      {showMenuSection === 'lunch' && <MenuSection show={true} handleClose={handleCloseMenuSection} section="lunch" />}
+      {showMenuSection === 'dessert' && <MenuSection show={true} handleClose={handleCloseMenuSection} section="dessert" />}
+      <AboutUs show={showAbout} handleClose={handleCloseAbout} />
+      <ContactUs show={showContact} handleClose={handleCloseContact} />
+    </div>
+  );
+}
+
+export default App;
