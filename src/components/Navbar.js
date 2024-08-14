@@ -4,11 +4,11 @@ import { Navbar, Nav } from 'react-bootstrap';
 function NavigationBar({ onMenuClick, onAboutClick, onContactClick }) {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="navbar-custom">
-      <Navbar.Brand href="#">The Hole In The Wall</Navbar.Brand>
+      <Navbar.Brand href="#"></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#home"></Nav.Link>
           <Nav.Link href="#about" onClick={onAboutClick}>About Us</Nav.Link>
           <Nav.Link href="#menu" onClick={onMenuClick}>Menu</Nav.Link>
           <Nav.Link href="#contact" onClick={onContactClick}>Contact Us</Nav.Link>

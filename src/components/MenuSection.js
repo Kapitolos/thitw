@@ -144,11 +144,13 @@ function MenuSection({ show, handleClose, section }) {
         return null;
     }
   };
-
   return (
     <Modal show={show} onHide={handleClose} size="lg" centered>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title>{key.charAt(0).toUpperCase() + key.slice(1)} Menu</Modal.Title>
+        <button type="button" className="custom-close-button" onClick={handleClose}>
+          &times;
+        </button>
       </Modal.Header>
       <Modal.Body>
         <Container>
@@ -167,17 +169,12 @@ function MenuSection({ show, handleClose, section }) {
             <Tab eventKey="dinner" title="Dinner">
               {renderMenuItems('dinner')}
             </Tab>
-            {/* Leave this for Bothams site. */}
-            {/* <Tab eventKey="lunch" title="Lunch">
-              {renderMenuItems('lunch')}
-            </Tab> */}
             <Tab eventKey="dessert" title="Dessert">
               {renderMenuItems('dessert')}
             </Tab>
             <Tab eventKey="specials" title="Specials">
               {renderMenuItems('specials')}
             </Tab>
-
           </Tabs>
         </Container>
       </Modal.Body>

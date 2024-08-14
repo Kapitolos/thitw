@@ -4,8 +4,11 @@ import { Modal, Container, Row, Col } from 'react-bootstrap';
 function MenuSelector({ show, handleClose, onSelectSection }) {
   return (
     <Modal show={show} onHide={handleClose} size="lg" centered className="menu-selector-modal">
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title>Select Menu Section</Modal.Title>
+        <button type="button" className="custom-close-button" onClick={handleClose}>
+          &times;
+        </button>
       </Modal.Header>
       <Modal.Body>
         <Container>
