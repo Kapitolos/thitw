@@ -2,19 +2,20 @@ import React from 'react';
 
 function VerticalColumn() {
   return (
-    <div className="vertical-column">
-      <h1 className="bar-name">The Hole In The Wall</h1>
-      {/* <p className="bar-blurb">Cozy vibes, Craft Beer, Scotch, and Grub.</p> */}
-      <p className="bar-blurb">2867A Dundas St W</p>
-      <p className="bar-blurb">Mon-Sun</p>
-      <p className="bar-blurb">5 - late</p>
-      <p className="bar-blurb"style={{ textDecoration: 'underline' }} >Kitchen</p>
-        <p className="bar-blurb">Sun - Thur </p>
-        <p className="bar-blurb">5 - 11</p>
-        <p className="bar-blurb">Fri - Sat </p>
-        <p className="bar-blurb">5 -12</p>
+<div className="vertical-column">
+  <h1 className="bar-name">
+    <span className="large-text">The HOLE</span> <br/>
+    <span className="small-text">in the</span> <br/>
+    <span className="large-text">WALL</span>
+  </h1>
+  <p className="bar-blurb underline">• 2867A Dundas Street West •</p>
+  <p className="bar-blurb">Open 7 days a week</p>
+  <p className="bar-blurb underline">Kitchen hours</p>
+  <p className="bar-blurb">Sun - Thur 5 - 11</p>
+  <p className="bar-blurb">Fri - Sat 5 - 12</p>
+</div>
 
-    </div>
+
   );
 }
 
