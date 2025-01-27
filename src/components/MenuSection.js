@@ -11,19 +11,18 @@ function MenuSection({ show, handleClose, section }) {
           <>
             <h3>Appetizers & Sharing</h3>
             <ul>
-                <li>Latkes - Rutledge Potatoes, Apple Sauce, Crème Fraiche, Chives - $11</li>
-                <li>Zucchini Flowers - Romesco, Almond, Red Pepper, Smoked Paprika, Sourdough, Tempura Batter, Herb Aioli - $17</li>
+                <li>Latkes - Rutledge Potatoes, Apple Sauce, Crème Fraiche, Chives - $11</li>       
                 <li>Smoked Cerignola Olives - Olive Oil, Orange Zest, Fresh Cayenne Pepper, Bay Leaf - $9</li>
-                <li>Corn Chowder - Welsh Bros Chocolate Sunshine, Dbl Smoke Bacon, Chicken Stock, Cream, Yukon Gold Potato, Onion, Herbs - $11</li>
+                <li>French Onion Soup - Caramelized Onion, White Wine, Port, Beef Stock, Gruyere, Bagel Croustini (Seasame Seed)- $12</li>
                 <li>Chicken Liver Pate - Butter, Apple, Onions, Garlic, Turmeric, Garam Masala with Sourdough Toast - $16</li>
                 <li>Oysters Half Dozen/Dozen - East Coast, Cocktail Sauce, Mignonette, Fresh Horseradish - $19/$35</li>
-                <li>Burrata, Cherry Tomato and Basil - Burrata, Cherry Tomato, Basil Pesto (Cashew, Parmesan), Olive Oil, Sourdough Toast - $25</li>
+                <li>Beetroot and Burrata - Roasted and Marinated Beets, Olive Oil, Sherry and Cider Vinegar, Spices + Herbs + Maldon Salt, Sourdough Toast - $23</li>
                 <li>House Salad - Boston Lettuce, White Radicchio, Carrots, Radish, Kale, Orange Segments, Russian Dressing - $16</li>
                 <li>Kale Caesar Salad - Baby Kale, Dbl Smoke Bacon, Dried Cranberry, Sourdough Crouton, Parmesan, House Caesar Dressing (Eggs, Dijon, Anchovy) - $16</li>
                 <li>Shaved Brussel Sprout Salad - Farro, Ricotta Salata, Honey Mustard Vinaigrette, Pickled Apricots, Red Onion - $16</li>
                 <li>Spicy Chinatown "Style" Calamari - Fried, Buttermilk Marinated Calamari, Chili, Honey Szechwan Sauce - $19</li>
                 <li>Trout Gravlax Carpaccio - House Beet Cured Gravlax, Moroccan Olives, Sundried Tomatoes, Capers, Chives, Pickled Onions, Olive Oil, House Sourdough Bagel, Crème Fraiche - $20</li>
-                <li>Mama and Baba Ghanoush + Pita - Zucchini, Eggplant, Tahini, Cherry Tomatoes, Olive Oil, Parsley, Garlic, Lemon Juice, Zaatar - $21</li>
+                <li>Hummus + Pita - Chickpeas, Tahini, Olive Oil, Parsley, Lemon Juice, Zatar, Preserved Lemon, Hot Pepper Spread - $21</li>
                 <li>Smoked Chicken Wings - Brined and Smoked, Herb Rub, Buffalo Sauce, Ranch, Crudite - $17</li>
               </ul>
           </>
