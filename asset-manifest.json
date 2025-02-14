@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/thitw/static/css/main.070c8f7f.css",
-    "main.js": "/thitw/static/js/main.9aba9b77.js",
+    "main.js": "/thitw/static/js/main.97347299.js",
     "static/media/chalk.jpg": "/thitw/static/media/chalk.89f4c97d3dcfa68ca47e.jpg",
     "static/media/pizzafire.JPG": "/thitw/static/media/pizzafire.c2038d12ad180e390264.JPG",
     "static/media/lights.JPG": "/thitw/static/media/lights.ba6fdf6dd383c5cb9a7d.JPG",
     "index.html": "/thitw/index.html",
     "main.070c8f7f.css.map": "/thitw/static/css/main.070c8f7f.css.map",
-    "main.9aba9b77.js.map": "/thitw/static/js/main.9aba9b77.js.map"
+    "main.97347299.js.map": "/thitw/static/js/main.97347299.js.map"
   },
   "entrypoints": [
     "static/css/main.070c8f7f.css",
-    "static/js/main.9aba9b77.js"
+    "static/js/main.97347299.js"
   ]
 }
