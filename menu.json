@@ -1,4 +1,16 @@
 {
+        
+        "lunch": [
+          {"name": "Breakfast Plates","description": "Served with Toast, Smoked Bacon, Tomatoes, and Potatoes. Scrambled Eggs or Eggs any Style","price": "$17"},
+          {"name": "Breakfast Sandwich","description": "Fried Eggs, Bacon, Tomato, Aged Cheddar, Lettuce, Mayo, on a Sourdough Bun","price": "$16"},
+          {"name": "Avocado Toast","description": "Sourdough, Olive Oil, Citrus, Pepper, Sea Salt","price": "$14"},
+          {"name": "Trout Gravlax Platter","description": "House Cured Gravlax, Cream Cheese, Red Onion, Capers, Sourdough Bagel","price": "$16"},
+          {"name": "Veggie Burger W/Fries","description": "Mixed Mushrooms, Oat, Lentil, Quinoa, Dill Pickles, Tomato, Lettuce","price": "$16"},
+          {"name": "Bacon Cheeseburger W/Fries","description": "Double Patty, Smoked Bacon, Cheese, Lettuce, Tomato, Onions, House Sauce","price": "$19"},
+          {"name": "Green Salad","description": "Baby Kale, Farro, Roasted Squash, Walnuts, Mustard Vinaigrette","price": "$14"}
+  ],
+
+
         "appetizers": [
           { "name": "Latkes", "description": "Rutledge Potatoes, Apple Sauce, Crème Fraiche, Chives", "price": "$11" },
           { "name": "Smoked Chicken Wings", "description": "Brined and Smoked, Herb Rub, Buffalo Sauce, Ranch, Crudite", "price": "$17" },
@@ -45,5 +57,19 @@
           { "name": "Veggie Burger", "description": "Bean, Oat, Lentil, Quinoa, Mixed Mushroom, Miso", "price": "$19" },
           { "name": "Shepherd's Pie", "description": "Braised Lamb, Onions, Carrot, Duchess Potatoes, Gravy", "price": "$23" },
           { "name": "Club Sandwich", "description": "Pulled Chicken, Sourdough Bread, Mayo, Dbl Smoked Bacon, Lettuce, Tomato, Fries", "price": "$21" }
-        ]
+        ],
+        "dessert": [
+          { "name": "Apple Crumble", "description": "Ontario Apples, Oats, Butter, Creme Fraiche", "price": "$12" },
+          { "name": "Chocolate Pot De Crème", "description": "Callebaut Dark Chocolate Pudding", "price": "$12" },
+          { "name": "Sour Cream Panna Cotta", "description": "Lemon Zest, Vanilla Fruit Compote", "price": "$12" },
+          { "name": "Sticky Toffee", "description": "Warm Date Pudding, Toffee Sauce", "price": "$11" },
+          { "name": "Brownie Smores", "description": "Double Chocolate Brownie, Wood Fired Marshmallow, Graham Cracker", "price": "$12" }
+  ],
+        "specials": [
+          { "name": "Sunday", "price": "Sunday Roast" },
+          { "name": "Monday", "price": "Pizzas Two for $28" },
+          { "name": "Tuesday", "price": "$1.50 a Shuck Oysters" },
+          { "name": "Thursday", "price": "Burger and a Beer Combo" }
+  ]
+
     }
