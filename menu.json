@@ -13,16 +13,16 @@
 
         "appetizers": [
           { "name": "Latkes", "description": "Rutledge Potatoes, Apple Sauce, Crème Fraiche, Chives", "price": "$11" },
-          { "name": "Smoked Chicken Wings", "description": "Brined and Smoked, Herb Rub, Buffalo Sauce, Ranch, Crudite", "price": "$17" },
+          { "name": "Smoked Chicken Wings", "description": "Brined and Smoked, Herb Rub, Buffalo Sauce, Ranch, Crudite", "price": "$18" },
           { "name": "Smoked Cerignola Olives", "description": "Olive Oil, Orange Zest, Fresh Cayenne Pepper, Bay Leaf", "price": "$9" },
-          { "name": "French Onion Soup", "description": "Caramelized Onion, White Wine, Port, Beef Stock, Gruyere, Bagel Crostini (Sesame Seed)", "price": "$12" },
-          { "name": "Chicken Liver Pate", "description": "Butter, Apple, Onions, Garlic, Turmeric, Garam Masala with Sourdough Toast", "price": "$16" },
-          { "name": "Oysters Half Dozen/Dozen", "description": "East Coast, Cocktail Sauce, Mignonette, Fresh Horseradish", "price": "$19/$35" },
-          { "name": "Beetroot and Burrata", "description": "Roasted and Marinated Beets, Olive Oil, Sherry and Cider Vinegar, Spices + Herbs + Maldon Salt", "price": "$23" },
+          { "name": "Asparagus Veloute Soup", "description": "Local Ontario Asparagus, Chicken Stock (Roux), Finished with Crème Fraiche, Sourdough Toast", "price": "$11" },
+          { "name": "Chicken Liver Pate", "description": "Butter, Apple, Onions, Garlic, Turmeric, Garam Masala with Sourdough Toast", "price": "$17" },
+          { "name": "Oysters Half Dozen/Dozen", "description": "East Coast, Cocktail Sauce, Mignonette, Fresh Horseradish", "price": "$19/$36" },
+          { "name": "Wild Leek Burrata", "description": "Local Ramps (Wild Leek), Pesto, Cashews, Parmesan, Olive Oil, Pickled Ramp Bulbs, Sourdough Toast", "price": "$23" },
           { "name": "House Salad", "description": "Boston Lettuce, White Radicchio, Carrots, Radish, Kale, Orange Segments, Russian Dressing", "price": "$16" },
-          { "name": "Kale Caesar Salad", "description": "Baby Kale, Dbl Smoke Bacon, Dried Cranberry, Sourdough Crouton, Parmesan, House Caesar Dressing (Eggs, Dijon, Anchovy)", "price": "$16" },
+          { "name": "Kale Caesar Salad", "description": "Baby Kale, Dbl Smoke Bacon, Dried Cranberry, Sourdough Crouton, Parmesan, House Caesar Dressing (Eggs, Dijon, Anchovy)", "price": "$17" },
           { "name": "Shaved Brussel Sprout Salad", "description": "Farro, Ricotta Salata, Honey Mustard Vinaigrette, Pickled Apricots, Red Onion", "price": "$16" },
-          { "name": "Spicy Chinatown \"Style\" Calamari", "description": "Fried, Buttermilk Marinated Calamari, Chili, Honey Szechwan Sauce", "price": "$19" },
+          { "name": "Spicy Chinatown \"Style\" Calamari", "description": "Fried, Buttermilk Marinated Calamari, Chili, Honey Szechwan Sauce", "price": "$20" },
           { "name": "Trout Gravlax Carpaccio", "description": "House Beet Cured Gravlax, Moroccan Olives, Sundried Tomatoes, Capers, Chives, Pickled Onions, Olive Oil, House Sourdough Bagel, Crème Fraiche", "price": "$20" },
           { "name": "Hummus + Pita", "description": "Chickpeas, Tahini, Olive Oil, Parsley, Lemon Juice, Zaatar, Preserved Lemon, Hot Pepper Spread", "price": "$21" }
         ],
