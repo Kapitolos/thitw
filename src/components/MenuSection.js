@@ -11,6 +11,9 @@ function MenuSection({ show, handleClose, section }) {
           <>
             <h3>Appetizers & Sharing</h3>
             <ul>
+<li>
+update test
+</li>
                 <li>Latkes - Rutledge Potatoes, Apple Sauce, Crème Fraiche, Chives - $11</li>       
                 <li>Smoked Cerignola Olives - Olive Oil, Orange Zest, Fresh Cayenne Pepper, Bay Leaf - $9</li>
                 <li>French Onion Soup - Caramelized Onion, White Wine, Port, Beef Stock, Gruyere, Bagel Croustini (Seasame Seed)- $12</li>
