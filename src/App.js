@@ -4,47 +4,33 @@ import Hero from './components/Hero';
 import MenuSection from './components/MenuSection';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
-import VerticalColumn from './components/VerticalColumn'; 
+import VerticalColumn from './components/VerticalColumn';
 import './App.css';
 
 function App() {
-  const [showMenuSection, setShowMenuSection] = useState(''); // Initialize with an empty string
-  const [showAbout, setShowAbout] = useState(false);
-  const [showContact, setShowContact] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
-  const handleShowMenu = () => setShowMenuSection('appetizers'); // Directly open the Appetizers section
-
-  const handleCloseMenuSection = () => setShowMenuSection(''); // Reset to hide menu
-
-  const handleShowAbout = () => setShowAbout(true);
-  const handleCloseAbout = () => setShowAbout(false);
-
-  const handleShowContact = () => setShowContact(true);
-  const handleCloseContact = () => setShowContact(false);
+  const handleSectionChange = (section) => setActiveSection(section);
+  const handleClose = () => setActiveSection('');
 
   return (
     <div className="App">
-      <NavigationBar 
-        onMenuClick={handleShowMenu} 
-        onAboutClick={handleShowAbout} 
-        onContactClick={handleShowContact} 
+      <NavigationBar
+        onMenuClick={() => handleSectionChange('menu')}
+        onAboutClick={() => handleSectionChange('about')}
+        onContactClick={() => handleSectionChange('contact')}
       />
       <div className="main-layout">
-        <VerticalColumn /> 
+        <VerticalColumn />
         <div className="content-area">
-          <Hero onMenuClick={handleShowMenu} onAboutClick={handleShowAbout} />
+          <Hero onMenuClick={() => handleSectionChange('menu')} />
         </div>
       </div>
-      {/* Directly display the MenuSection component when 'appetizers' is selected */}
-      {showMenuSection === 'appetizers' && (
-        <MenuSection 
-          show={true} 
-          handleClose={handleCloseMenuSection} 
-          section="appetizers" 
-        />
+      {activeSection === 'menu' && (
+        <MenuSection show={true} handleClose={handleClose}/>
       )}
-      <AboutUs show={showAbout} handleClose={handleCloseAbout} />
-      <ContactUs show={showContact} handleClose={handleCloseContact} />
+      {activeSection === 'about' && <AboutUs show={true} handleClose={handleClose} />}
+      {activeSection === 'contact' && <ContactUs show={true} handleClose={handleClose} />}
     </div>
   );
 }

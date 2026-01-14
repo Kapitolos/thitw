@@ -1,17 +1,57 @@
 body {
-  background-image: url(../public/bar.jpg);
-  background-size: cover;
+  background-image: url(../public/lights.JPG);
+  background-size: 100%;
+  /* background-size: cover; */
   background-position: center;
   background-attachment: fixed; /* Ensures the image stays fixed as you scroll */
   background-repeat: no-repeat;
   color: #f0e5d8; /* Ensures all text is readable */
 }
 
+/* Parallax Background */
+.hero-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-position 0.2s ease-in-out;
+}
+
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* Fade-in on Scroll */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(20px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Hover Animation */
+.menu-select-overlay-col {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-select-overlay-col:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
 /* navbar */
 .bg-dark {
   background-color: #2b2b2b; /* Dark chalkboard background */
   background-image: url('/public/chalk.jpg'); /* Path to your chalk texture */
-  background-size: cover; /* Ensure the image covers the entire area */
+  background-size: 100%; /* Ensure the image covers the entire area */
+  /* Took this out for navbar dropdown being a different shade or image. Taking this out blended the two. */
+  /* background-position: center; */
+  background-attachment: fixed; /* Ensures the image stays fixed as you scroll */
   background-blend-mode: multiply; /* Blend the image with the background color */
   color: #f0e5d8; /* Off-white text for the navbar items */
 
@@ -27,6 +67,26 @@ body {
 .navbar-custom .fab {
   font-size: 1.2rem; /* Adjust the size of the social media icons */
   margin-left: 15px; /* Add some space between icons */
+}
+
+/* Button or Link Hover Animation */
+.nav-link, .custom-close-button, button {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover, .custom-close-button:hover, button:hover {
+  transform: scale(1.1);
+  color: #292303; /* Gold accent on hover */
+}
+
+/* Navbar Scroll Effect */
+.bg-dark {
+  transition: background-color 0.3s ease;
+}
+
+.bg-dark.scrolled {
+  background-color: rgba(43, 43, 43, 0.8); /* Darker with transparency */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow to give depth */
 }
 
 .App {
@@ -61,6 +121,23 @@ body {
   z-index: 1;
 }
 
+/* Hero Section Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section h1, .hero-section p {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
 .overlay-footer {
   display: flex;
   justify-content: space-around;
@@ -73,8 +150,10 @@ body {
 .menu-select-overlay-col {
   padding: 20px;
   background-color: #2b2b2b; /* Dark chalkboard background */
-  background-image: url('../public/chalk.jpg'); /* Path to your chalk texture */
-  background-size: cover; /* Ensure the image covers the entire area */
+  background-image: url('../public/pizzafire.JPG'); /* Path to your chalk texture */
+  background-size: 100%; /* Ensure the image covers the entire area */
+  background-position: center;
+  background-attachment: fixed; /* Ensures the image stays fixed as you scroll */
   background-blend-mode: multiply; /* Blend the image with the background color */
   color: #f0e5d8; /* Off-white text */
   border-radius: 10px;
@@ -169,25 +248,35 @@ body {
 
 
 .modal-content {
-  background-color: #2b2b2b; /* Dark chalkboard background */
-  background-image: url('../public/chalk.jpg'); /* Path to your chalk texture */
-  background-size: cover; /* Ensure the image covers the entire area */
+  background-color: #614040; /* Dark chalkboard background */
+  background-image: url('../public/pizzafire.JPG'); /* Path to your chalk texture */
+  background-size: 100%; /* Ensure the image covers the entire area */
+  background-position: center;
+  background-attachment: fixed; /* Ensures the image stays fixed as you scroll */
   background-blend-mode: multiply; /* Blend the image with the background color */
   color: #f0e5d8; /* Off-white text */
   font-family: "Cabin Sketch", sans-serif;
   padding: 20px;
   border-radius: 10px; /* Add a bit of rounding for a polished look */
-  max-width: 90%; /* Adjust the width to make it slightly smaller */
+   max-width: 90%; /* Adjust the width to make it slightly smaller */
   margin: 0 auto; /* Center the modal */
 }
 
+/* .modal-header {
+  
+   margin-top: -60px;
+   margin-bottom: -64px;
+} */
+
 .modal-header, .modal-footer {
   border: none; /* Remove default Bootstrap borders */
+  /* min-height: 473px; */
 }
 
 .modal-body {
   font-size: 1rem; /* Slightly smaller font size */
   line-height: 1.5; /* Comfortable line spacing */
+
 }
 
 
@@ -296,6 +385,13 @@ body {
   padding: 15px; /* Reduce padding in the body */
 }
 
+/* Menu Item Hover */
+.menu-select-overlay-col:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); /* Light glow on hover */
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
 .menu-selector-overlay h3 {
   font-size: 1.5rem; /* Slightly smaller heading size */
   margin-bottom: 15px;
@@ -332,6 +428,9 @@ body {
     margin-top: 15px; /* Optional: Adds a bit of space above the image */
   }
   
+
+
+ 
 
 .contact-us-section {
   padding: 50px 0;
@@ -444,7 +543,20 @@ body {
   margin-left: -300px; /* Negative margin to pull the Hero over the full width */
 }
 
+@media (min-width: 992px) {
+  .modal-lg, .modal-xl {
+      margin-top: 27px;
+      --bs-modal-width: 800px;
+  }
+}
+
+
 @media (max-width: 576px) {
+  body {
+    background-size: cover !important;
+    color: red;
+  }
+  
   .vertical-column {
     max-width: 90%; /* Allow the column to take up more space on small screens */
     margin: 0 auto; /* Center it horizontally */
@@ -457,6 +569,7 @@ body {
     border: 2px solid #f0e5d8; /* White border matching the font color */
     border-radius: 10px; /* Rounded edges */
     box-sizing: border-box; /* Ensures padding and border are included in the element's width and height */
+    height: 82vh;
   }
 
   .main-layout {
@@ -469,17 +582,25 @@ body {
 }
 
 .modal-content {
-  background-color: #2b2b2b; /* Dark chalkboard background */
-  background-image: url('../public/chalk.jpg'); /* Path to your chalk texture */
+  background-color: #614040;  /* Dark chalkboard background */
+  background-image: url('../public/pizzafire.JPG'); /* Path to your chalk texture */
   background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center;
+  background-attachment: fixed; /* Ensures the image stays fixed as you scroll */
   background-blend-mode: multiply; /* Blend the image with the background color */
   color: #f0e5d8; /* Off-white text */
   font-family: "Cabin Sketch", sans-serif;
   border-radius: 10px;
   max-width: 100%;
   margin: 0 auto;
+  padding: 0px;
 }
 
+
+/* Took this out for contact page map. Not sure why it was here. */
+/* .modal {
+--bs-modal-padding: 0rem;
+} */
 
 
   

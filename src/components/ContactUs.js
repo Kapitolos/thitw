@@ -11,28 +11,29 @@ function ContactUs({ show, handleClose }) {
     <>
       <Modal show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header>
-          <Modal.Title>Contact Us</Modal.Title>
+          <Modal.Title >Contact Us</Modal.Title>
           <button type="button" className="custom-close-button" onClick={handleClose}>
             &times;
           </button>
         </Modal.Header>
         <Modal.Body>
-          <Container>
+          <Container id="contactContainer">
             <Row>
               <Col md={12}>
                 <h4>Get in Touch</h4>
                 <p>
-                  Address: 2867A Dundas St W, Toronto, ON M6P 1Y9<br/>
-                  Phone: +1 416-760-7041<br/>
+                  Address: 2867A Dundas St W, Toronto<br/>
+                  Phone: 416-760-7041<br/>
                   Email: theholeinthewallto@gmail.com
                 </p>
+                <a href= {"https://maps.app.goo.gl/5JiDPQqDvjNDMuzw7"} target="_blank" rel="noopener noreferrer">
                 <img
-                  src="map.jpg"
+                  src={`${process.env.PUBLIC_URL}/map2.jpg`}
                   alt="Map"
-                  className="img-fluid"
+                  className="img-fluid sm"
                   style={{ cursor: 'pointer' }}
-                  onClick={handleMapShow}
                 />
+              </a>
               </Col>
             </Row>
           </Container>
@@ -44,7 +45,7 @@ function ContactUs({ show, handleClose }) {
           <Modal.Title>Map</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src="map.jpg" alt="Map" className="img-fluid" />
+          <img src={`${process.env.PUBLIC_URL}/map.jpg`} alt="Map" className="img-fluid" />
         </Modal.Body>
       </Modal>
     </>
@@ -52,3 +53,5 @@ function ContactUs({ show, handleClose }) {
 }
 
 export default ContactUs;
+
+

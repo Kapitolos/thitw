@@ -8,8 +8,8 @@ function VerticalColumn() {
     <span className="small-text">in the</span> <br/>
     <span className="large-text">WALL</span>
   </h1>
-  <p className="bar-blurb underline">• 2867A Dundas Street West •</p>
-  <p className="bar-blurb">Open 7 days a week</p>
+  <p className="bar-blurb underline">2867A Dundas Street West</p>
+  <p className="bar-blurb">Open late 7 days a week</p>
   <p className="bar-blurb underline">Kitchen hours</p>
   <p className="bar-blurb">Sun - Thur 5 - 11</p>
   <p className="bar-blurb">Fri - Sat 5 - 12</p>
