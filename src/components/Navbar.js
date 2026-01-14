@@ -7,18 +7,18 @@ function NavigationBar({ onMenuClick, onAboutClick, onContactClick }) {
       <Navbar.Brand href="#"></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="me-auto">
           <Nav.Link href="#home"></Nav.Link>
           <Nav.Link href="#about" onClick={onAboutClick}>About Us</Nav.Link>
           <Nav.Link href="#menu" onClick={onMenuClick}>Menu</Nav.Link>
           <Nav.Link href="#contact" onClick={onContactClick}>Contact Us</Nav.Link>
-          <Nav.Link href="https://bothams.ca/" target="_blank">Bothams</Nav.Link>
+          <Nav.Link href="https://bothams.ca/" target="_blank" rel="noopener noreferrer">Bothams</Nav.Link>
         </Nav>
-        <Nav className="ml-auto">
-          <Nav.Link href="https://www.facebook.com/HoleInTheWallTO/" target="_blank">
+        <Nav className="ms-auto">
+          <Nav.Link href="https://www.facebook.com/HoleInTheWallTO/" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-facebook-f"></i>
           </Nav.Link>
-          <Nav.Link href="https://www.instagram.com/theholeinthewallto" target="_blank">
+          <Nav.Link href="https://www.instagram.com/theholeinthewallto" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-instagram"></i>
           </Nav.Link>
         </Nav>
