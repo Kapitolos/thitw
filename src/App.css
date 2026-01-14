@@ -8,6 +8,43 @@ body {
   color: #f0e5d8; /* Ensures all text is readable */
 }
 
+/* Prevent layout shift when modals open */
+body.modal-open {
+  overflow: hidden;
+  padding-right: 0 !important; /* Prevent Bootstrap's default padding-right */
+}
+
+/* Ensure navbar maintains full width regardless of scrollbar */
+.navbar-custom {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Ensure navbar container doesn't shift */
+.navbar {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Prevent navbar toggler from getting margin-right when modals open */
+.navbar-toggler {
+  margin-right: 0 !important;
+}
+
+/* Ensure navbar brand and toggler don't shift when modals open */
+.navbar-brand,
+.navbar-toggler {
+  margin-right: 0 !important;
+}
+
+/* Prevent any margin changes on navbar elements when modal is open */
+body.modal-open .navbar-toggler,
+body.modal-open .navbar-brand {
+  margin-right: 0 !important;
+}
+
 /* Parallax Background */
 .hero-section {
   background-attachment: fixed;
@@ -71,6 +108,7 @@ html {
   left: 50%;
   background-color: #f0e5d8;
   transition: width 0.3s ease, left 0.3s ease;
+  pointer-events: none; /* Prevent interaction */
 }
 
 .navbar-custom .nav-link:hover {
@@ -80,6 +118,15 @@ html {
 .navbar-custom .nav-link:hover::after {
   width: 80%;
   left: 10%;
+}
+
+/* Disable underline animation when modal is open to prevent layout shifts */
+body.modal-open .navbar-custom .nav-link::after {
+  display: none !important;
+}
+
+body.modal-open .navbar-custom .nav-link:hover::after {
+  display: none !important;
 }
 
 .navbar-custom .fab {
@@ -95,6 +142,16 @@ html {
 .nav-link:hover, .custom-close-button:hover, button:hover {
   transform: scale(1.1);
   color: #292303; /* Gold accent on hover */
+}
+
+/* Prevent nav-link transforms from affecting layout when modal is open */
+body.modal-open .navbar-custom .nav-link {
+  transform: none !important;
+  transition: none !important;
+}
+
+body.modal-open .navbar-custom .nav-link:hover {
+  transform: none !important;
 }
 
 /* Navbar Scroll Effect */
@@ -328,7 +385,49 @@ html {
 .modal-body {
   font-size: 1rem; /* Slightly smaller font size */
   line-height: 1.5; /* Comfortable line spacing */
+  height: 500px; /* Fixed height to prevent resizing when switching tabs */
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
 
+/* Custom scrollbar styling for modal body */
+.modal-body::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: transparent; /* Transparent background */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: #f0e5d8; /* Match menu text color */
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff; /* Slightly brighter on hover */
+}
+
+.modal-body::-webkit-scrollbar-button {
+  background-color: #f0e5d8; /* Match menu text color for arrows */
+  border: none;
+}
+
+.modal-body::-webkit-scrollbar-button:hover {
+  background-color: #ffffff; /* Slightly brighter on hover */
+}
+
+.modal-body::-webkit-scrollbar-button:single-button {
+  display: block;
+  height: 16px;
+  width: 12px;
+}
+
+/* Firefox scrollbar styling */
+.modal-body {
+  scrollbar-width: thin;
+  scrollbar-color: #f0e5d8 transparent;
 }
 
 
@@ -631,16 +730,21 @@ html {
   .vertical-column {
     max-width: 90%; /* Allow the column to take up more space on small screens */
     margin: 0 auto; /* Center it horizontally */
+    margin-top: 10vh; /* Add top margin for better positioning */
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Stack items vertically */
     padding: 50px;
-    width: 100%;
+    width: 90%; /* Fixed width to prevent changes */
     /* margin-right: 20px; Space between the column and the hero section */
     border: 2px solid #f0e5d8; /* White border matching the font color */
     border-radius: 10px; /* Rounded edges */
     box-sizing: border-box; /* Ensures padding and border are included in the element's width and height */
     height: 82vh;
+  }
+
+  .content-area {
+    margin-left: 0; /* Remove negative margin on mobile */
   }
 
   .main-layout {
@@ -650,6 +754,27 @@ html {
     align-content: space-around;
     flex-wrap: wrap;
     flex-direction: column-reverse;
+  }
+
+  /* Make modal take up 75% of screen width on mobile - lock it down completely */
+  .modal {
+    --bs-modal-width: 75vw !important;
+  }
+
+  .modal-dialog {
+    width: 75vw !important;
+    max-width: 75vw !important;
+    min-width: 75vw !important;
+    margin: 1.75rem auto;
+  }
+
+  /* Ensure modal-lg doesn't override our mobile width */
+  .modal-dialog.modal-lg,
+  .modal-lg .modal-dialog {
+    width: 75vw !important;
+    max-width: 75vw !important;
+    min-width: 75vw !important;
+    --bs-modal-width: 75vw !important;
   }
 
   .modal-content {
@@ -662,10 +787,27 @@ html {
     color: #f0e5d8; /* Off-white text */
     font-family: "Cabin Sketch", sans-serif;
     border-radius: 10px;
-    max-width: 100%;
+    width: 100% !important; /* Fixed width to prevent changes */
+    max-width: 100% !important;
+    min-width: 100% !important; /* Prevent width from shrinking */
     margin: 0 auto;
     padding: 0px;
     min-height: 400px; /* Fixed minimum height to prevent size changes */
+    box-sizing: border-box;
+  }
+
+  .modal-body {
+    height: 75vh; /* Use 75% of viewport height for better mobile experience */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+  }
+
+  /* Prevent Container from affecting modal width */
+  .modal-body .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
   }
 
 

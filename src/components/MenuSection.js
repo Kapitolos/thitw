@@ -27,10 +27,12 @@ function MenuSection({ show, handleClose, section }) {
     }
   };
 
-  // Fetch menu when component mounts & when `key` changes
+  // Fetch initial menu data when modal opens
   useEffect(() => {
-    fetchMenuData(key);
-  }, [key]);
+    if (show) {
+      fetchMenuData(key);
+    }
+  }, [show, key]);
 
   // Toggle description visibility
   const toggleDescription = (itemName) => {

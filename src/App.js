@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavigationBar from './components/Navbar';
 import Hero from './components/Hero';
 import MenuSection from './components/MenuSection';
@@ -12,6 +12,32 @@ function App() {
 
   const handleSectionChange = (section) => setActiveSection(section);
   const handleClose = () => setActiveSection('');
+
+  // Prevent Bootstrap from adding padding-right to body when modals open
+  useEffect(() => {
+    const preventModalPadding = () => {
+      if (document.body.classList.contains('modal-open')) {
+        document.body.style.paddingRight = '0';
+      }
+    };
+
+    // Watch for modal-open class on body and remove padding
+    const observer = new MutationObserver(() => {
+      preventModalPadding();
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class', 'style']
+    });
+
+    // Check initial state
+    preventModalPadding();
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className="App">
