@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: Kapitolos/thitw
+  branch: alt # Change to 'master' if you want to edit the master branch instead
+  base_url: https://kapitolos.github.io/thitw # Your GitHub Pages URL
+  auth_type: pkce # Use PKCE for GitHub OAuth
+
+media_folder: public # Media files will be stored in the public folder
+public_folder: / # Public path for media files
+
+collections:
+  - name: "menu"
+    label: "Menu"
+    files:
+      - label: "Menu Items"
+        name: "menu"
+        file: "public/menu.json"
+        fields:
+          - { label: "Appetizers", name: "appetizers", widget: "list", 
+              fields:
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Price", name: "price", widget: "string" }
+            }
+          - { label: "Pizzas", name: "pizzas", widget: "list",
+              fields:
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Price", name: "price", widget: "string" }
+            }
+          - { label: "Dinner", name: "dinner", widget: "list",
+              fields:
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Price", name: "price", widget: "string" }
+            }
+          - { label: "Dessert", name: "dessert", widget: "list",
+              fields:
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Price", name: "price", widget: "string" }
+            }
+          - { label: "Lunch", name: "lunch", widget: "list",
+              fields:
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Price", name: "price", widget: "string" }
+            }
+          - { label: "Specials", name: "specials", widget: "list",
+              fields:
+                - { label: "Day", name: "name", widget: "string" }
+                - { label: "Special", name: "price", widget: "string" }
+            }
