@@ -322,6 +322,7 @@ body.modal-open .navbar-custom .nav-link:hover {
 
 .overlay-modal .modal-body {
   padding: 20px; /* Adjust padding as needed */
+  padding-bottom: 40px; /* Add spacing at bottom */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -400,14 +401,23 @@ body.modal-open .navbar-custom .nav-link:hover {
 
 .modal-header, .modal-footer {
   border: none; /* Remove default Bootstrap borders */
+  padding-bottom: 10px; /* Reduce space below header */
   /* min-height: 473px; */
 }
 
 .modal-body {
   font-size: 1rem; /* Slightly smaller font size */
   line-height: 1.5; /* Comfortable line spacing */
-  height: 500px; /* Fixed height to prevent resizing when switching tabs */
+  min-height: 500px; /* Minimum height to ensure content fits */
+  max-height: 70vh; /* Maximum height based on viewport */
   overflow-y: auto; /* Allow scrolling if content exceeds height */
+  padding-bottom: 40px; /* Add spacing at bottom before scrolling */
+  padding-top: 15px; /* Reduce top padding to bring content up */
+}
+
+/* Ensure menu items have proper spacing from bottom of container */
+.modal-body .container {
+  padding-bottom: 30px;
 }
 
 /* Custom scrollbar styling for modal body */
@@ -473,12 +483,35 @@ body.modal-open .navbar-custom .nav-link:hover {
 
 .modal-body li {
   margin-bottom: 8px; /* Adjust the value to increase or decrease spacing */
+  text-align: left; /* Ensure menu items stay left-aligned */
+}
+
+/* Ensure menu item buttons are left-aligned and don't center when wrapping */
+.modal-body li .btn,
+.modal-body li button {
+  text-align: left !important;
+  display: block;
+  width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Prevent centering on multi-line menu items */
+.modal-body .list-unstyled li {
+  text-align: left !important;
 }
 
 .menu-title {
   text-align: center;
   margin-bottom: 40px;
   font-size: 2.5rem;
+}
+
+.select-dish-text {
+  font-style: italic;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  margin-top: -10px; /* Reduce distance from top */
 }
 
 .menu-category h3 {
@@ -510,7 +543,7 @@ body.modal-open .navbar-custom .nav-link:hover {
 
 .menu-selector-modal .modal-dialog {
   max-height: 70vh; /* Set the maximum height to 70% of the viewport height */
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .menu-selector-modal .modal-body {
@@ -737,8 +770,50 @@ body.modal-open .navbar-custom .nav-link:hover {
 
 @media (min-width: 992px) {
   .modal-lg, .modal-xl {
-      margin-top: 27px;
+      margin-top: 3%;
       --bs-modal-width: 800px;
+  }
+  
+  /* Ensure all modals (menu, about, contact) have the same top margin on desktop */
+  .modal-dialog.centered,
+  .modal-dialog {
+    margin-top: 3% !important;
+    margin-bottom: 5%;
+  }
+  
+  /* Override Bootstrap's centered class transform to use fixed margin instead of centering */
+  .modal.show .modal-dialog.centered {
+    transform: translateY(0) !important;
+    margin-top: 3% !important;
+    margin-bottom: auto !important;
+  }
+  
+  /* Ensure non-centered modals also get the same margin */
+  .modal.show .modal-dialog:not(.centered) {
+    margin-top: 3% !important;
+    margin-bottom: auto !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* Make modal body taller on desktop to show images properly */
+  .modal-body {
+    min-height: 60vh;
+    max-height: 75vh;
+  }
+  
+  /* Ensure images display properly in modals */
+  .about-us-image,
+  .modal-body img {
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Specific height for about and contact modals to show images */
+  .overlay-modal .modal-body {
+    min-height: 60vh;
+    max-height: 75vh;
   }
 }
 
@@ -841,6 +916,20 @@ body.modal-open .navbar-custom .nav-link:hover {
   .modal-body {
     height: 75vh; /* Use 75% of viewport height for better mobile experience */
     overflow-y: auto; /* Allow scrolling if content exceeds height */
+  }
+  
+  /* Ensure menu items stay left-aligned on mobile */
+  .modal-body li .btn,
+  .modal-body li button {
+    text-align: left !important;
+    display: block;
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  .modal-body .list-unstyled li {
+    text-align: left !important;
   }
 
   /* Prevent Container from affecting modal width */

@@ -62,16 +62,15 @@ function MenuSection({ show, handleClose, section }) {
   );
 
   return (
-    <Modal show={show} onHide={handleClose} size="lg">
+    <Modal show={show} onHide={handleClose} size="lg" centered>
       <Modal.Header>
-        <Modal.Title>{key.charAt(0).toUpperCase() + key.slice(1)} Menu</Modal.Title>
         <button type="button" className="custom-close-button" onClick={handleClose}>
           &times;
         </button>
       </Modal.Header>
       <Modal.Body>
         <Container>
-          <h9>Select a dish for details</h9>
+          <p className="select-dish-text">Select a dish for details</p>
           <Tabs
             id="menu-tabs"
             activeKey={key}
