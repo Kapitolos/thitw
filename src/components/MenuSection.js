@@ -49,7 +49,7 @@ function MenuSection({ show, handleClose, section }) {
           <Button
             variant="link"
             onClick={() => toggleDescription(item.name)}
-            className="text-decoration-none text-light"
+            className="text-decoration-none"
           >
             {item.name} - {item.price}
           </Button>
@@ -62,7 +62,7 @@ function MenuSection({ show, handleClose, section }) {
   );
 
   return (
-    <Modal show={show} onHide={handleClose} size="lg" centered>
+    <Modal show={show} onHide={handleClose} size="lg" centered className="menu-modal">
       <Modal.Header>
         <button type="button" className="custom-close-button" onClick={handleClose}>
           &times;

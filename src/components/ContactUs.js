@@ -11,7 +11,6 @@ function ContactUs({ show, handleClose }) {
     <>
       <Modal show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header>
-          <Modal.Title >Contact Us</Modal.Title>
           <button type="button" className="custom-close-button" onClick={handleClose}>
             &times;
           </button>

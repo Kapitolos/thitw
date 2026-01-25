@@ -5,7 +5,6 @@ function AboutUs({ show, handleClose }) {
   return (
     <Modal show={show} onHide={handleClose} size="lg" centered className="overlay-modal">
       <Modal.Header>
-        <Modal.Title>About Us</Modal.Title>
         <button type="button" className="custom-close-button" onClick={handleClose}>
           &times;
         </button>

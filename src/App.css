@@ -144,6 +144,23 @@ body.modal-open .navbar-custom .nav-link:hover::after {
   color: #292303; /* Gold accent on hover */
 }
 
+/* Prevent hover scale effect on menu section buttons */
+.modal-body li .btn:hover,
+.modal-body li button:hover {
+  transform: none !important;
+  font-size: 1rem !important;
+}
+
+/* Prevent font size changes on menu item buttons when clicked */
+.modal-body li .btn:active,
+.modal-body li .btn:focus,
+.modal-body li button:active,
+.modal-body li button:focus {
+  font-size: 1rem !important;
+  transform: none !important;
+}
+
+
 /* Prevent nav-link transforms from affecting layout when modal is open */
 body.modal-open .navbar-custom .nav-link {
   transform: none !important;
@@ -354,7 +371,7 @@ body.modal-open .navbar-custom .nav-link:hover {
   background-repeat: no-repeat; /* Prevent tiling */
   background-blend-mode: multiply; /* Blend the image with the background color */
   color: #f0e5d8; /* Off-white text */
-  font-family: "Cabin Sketch", sans-serif;
+  font-family: "Tinos", serif;
   padding: 20px;
   border-radius: 10px; /* Add a bit of rounding for a polished look */
   max-width: 90%; /* Adjust the width to make it slightly smaller */
@@ -362,6 +379,66 @@ body.modal-open .navbar-custom .nav-link:hover {
   min-height: 400px; /* Fixed minimum height to prevent size changes */
   animation: modalFadeIn 0.2s ease-out;
   position: relative; /* For overlay positioning */
+}
+
+/* Menu modal specific styling - cream background, black text, no background image */
+.menu-modal .modal-content {
+  background-color: #faf8f3; /* Cream background */
+  background-image: none; /* Remove background image */
+  color: #000000; /* Black text */
+  font-family: "Tinos", serif;
+  border: 2px solid #e8e4d9; /* Elegant subtle border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.menu-modal .modal-content::before {
+  display: none; /* Remove overlay */
+}
+
+.menu-modal .custom-close-button {
+  color: #000000; /* Black close button */
+}
+
+.menu-modal .custom-close-button:hover {
+  color: #333333; /* Darker on hover */
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-modal .modal-body li .btn,
+.menu-modal .modal-body li button {
+  color: #000000 !important; /* Black text for menu items */
+}
+
+.menu-modal .modal-body .text-center {
+  color: #000000 !important; /* Black text for descriptions */
+}
+
+.menu-modal .nav-tabs .nav-link {
+  color: #000000 !important; /* Black text for tabs */
+}
+
+.menu-modal .nav-tabs .nav-link.active {
+  color: #000000 !important; /* Black text for active tab */
+}
+
+.menu-modal .modal-body::-webkit-scrollbar-thumb {
+  background-color: #666666; /* Darker scrollbar for white background */
+}
+
+.menu-modal .modal-body::-webkit-scrollbar-thumb:hover {
+  background-color: #333333; /* Darker on hover */
+}
+
+.menu-modal .modal-body::-webkit-scrollbar-button {
+  background-color: #666666; /* Darker scrollbar for white background */
+}
+
+.menu-modal .modal-body::-webkit-scrollbar-button:hover {
+  background-color: #333333; /* Darker on hover */
+}
+
+.menu-modal .modal-body {
+  scrollbar-color: #666666 transparent; /* Firefox scrollbar */
 }
 
 /* Add dark overlay to further darken the background */
@@ -494,6 +571,7 @@ body.modal-open .navbar-custom .nav-link:hover {
   width: 100%;
   white-space: normal;
   word-wrap: break-word;
+  font-size: 1rem !important; /* Prevent font size changes on click */
 }
 
 /* Prevent centering on multi-line menu items */
@@ -826,7 +904,7 @@ body.modal-open .navbar-custom .nav-link:hover {
   .vertical-column {
     max-width: 90%; /* Allow the column to take up more space on small screens */
     margin: 0 auto; /* Center it horizontally */
-    margin-top: 10vh; /* Add top margin for better positioning */
+    margin-top: 5vh; /* Reduced top margin to move it up */
     justify-content: center;
     align-items: center;
     flex-direction: column; /* Stack items vertically */
@@ -852,25 +930,25 @@ body.modal-open .navbar-custom .nav-link:hover {
     flex-direction: column-reverse;
   }
 
-  /* Make modal take up 75% of screen width on mobile - lock it down completely */
+  /* Make modal take up 90% of screen width on mobile - wider than before */
   .modal {
-    --bs-modal-width: 75vw !important;
+    --bs-modal-width: 90vw !important;
   }
 
   .modal-dialog {
-    width: 75vw !important;
-    max-width: 75vw !important;
-    min-width: 75vw !important;
+    width: 90vw !important;
+    max-width: 90vw !important;
+    min-width: 90vw !important;
     margin: 1.75rem auto;
   }
 
   /* Ensure modal-lg doesn't override our mobile width */
   .modal-dialog.modal-lg,
   .modal-lg .modal-dialog {
-    width: 75vw !important;
-    max-width: 75vw !important;
-    min-width: 75vw !important;
-    --bs-modal-width: 75vw !important;
+    width: 90vw !important;
+    max-width: 90vw !important;
+    min-width: 90vw !important;
+    --bs-modal-width: 90vw !important;
   }
 
   .modal-content {
@@ -881,7 +959,7 @@ body.modal-open .navbar-custom .nav-link:hover {
     background-repeat: no-repeat; /* Prevent tiling */
     background-blend-mode: multiply; /* Blend the image with the background color */
     color: #f0e5d8; /* Off-white text */
-    font-family: "Cabin Sketch", sans-serif;
+    font-family: "Tinos", serif;
     border-radius: 10px;
     width: 100% !important; /* Fixed width to prevent changes */
     max-width: 100% !important;
@@ -926,10 +1004,20 @@ body.modal-open .navbar-custom .nav-link:hover {
     width: 100%;
     white-space: normal;
     word-wrap: break-word;
+    font-size: 1rem !important; /* Prevent font size changes on click */
   }
   
   .modal-body .list-unstyled li {
     text-align: left !important;
+  }
+  
+  /* Prevent font size changes on menu item buttons when clicked on mobile */
+  .modal-body li .btn:active,
+  .modal-body li .btn:focus,
+  .modal-body li button:active,
+  .modal-body li button:focus {
+    font-size: 1rem !important;
+    transform: none !important;
   }
 
   /* Prevent Container from affecting modal width */
@@ -941,14 +1029,54 @@ body.modal-open .navbar-custom .nav-link:hover {
     box-sizing: border-box;
   }
 
+  /* Menu modal specific styling on mobile - cream background, black text, no background image */
+  .menu-modal .modal-content {
+    background-color: #faf8f3; /* Cream background */
+    background-image: none; /* Remove background image */
+    color: #000000; /* Black text */
+    font-family: "Tinos", serif;
+    border: 2px solid #e8e4d9; /* Elegant subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  .menu-modal .modal-content::before {
+    display: none; /* Remove overlay */
+  }
+
+  .menu-modal .custom-close-button {
+    color: #000000; /* Black close button */
+  }
+
+  .menu-modal .custom-close-button:hover {
+    color: #333333; /* Darker on hover */
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-modal .modal-body li .btn,
+  .menu-modal .modal-body li button {
+    color: #000000 !important; /* Black text for menu items */
+  }
+
+  .menu-modal .modal-body .text-center {
+    color: #000000 !important; /* Black text for descriptions */
+  }
+
+  .menu-modal .nav-tabs .nav-link {
+    color: #000000 !important; /* Black text for tabs */
+  }
+
+  .menu-modal .nav-tabs .nav-link.active {
+    color: #000000 !important; /* Black text for active tab */
+  }
+
 
 /* Took this out for contact page map. Not sure why it was here. */
 /* .modal {
 --bs-modal-padding: 0rem;
 } */
 
-
   
+
 
 
 }
