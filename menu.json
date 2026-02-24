@@ -1,0 +1,76 @@
+{
+        
+        "lunch": [
+          {"name": "Breakfast Plates","description": "Served with Toast, Smoked Bacon, Tomatoes, and Potatoes. Scrambled Eggs or Eggs any Style","price": "$17"},
+          {"name": "Breakfast Sandwich","description": "Fried Eggs, Bacon, Tomato, Aged Cheddar, Lettuce, Mayo, on a Sourdough Bun","price": "$16"},
+          {"name": "Avocado Toast","description": "Sourdough, Olive Oil, Citrus, Pepper, Sea Salt","price": "$14"},
+          {"name": "Trout Gravlax Platter","description": "House Cured Gravlax, Cream Cheese, Red Onion, Capers, Sourdough Bagel","price": "$16"},
+          {"name": "Veggie Burger W/Fries","description": "Mixed Mushrooms, Oat, Lentil, Quinoa, Dill Pickles, Tomato, Lettuce","price": "$16"},
+          {"name": "Bacon Cheeseburger W/Fries","description": "Double Patty, Smoked Bacon, Cheese, Lettuce, Tomato, Onions, House Sauce","price": "$19"},
+          {"name": "Green Salad","description": "Baby Kale, Farro, Roasted Squash, Walnuts, Mustard Vinaigrette","price": "$14"}
+  ],
+
+
+        "appetizers": [
+          { "name": "Latkes", "description": "Rutledge Potatoes, Apple Sauce, Crème Fraiche, Chives", "price": "$11" },
+          { "name": "Smoked Chicken Wings", "description": "Brined and Smoked, Herb Rub, Buffalo Sauce, Ranch, Crudite", "price": "$18" },
+          { "name": "Smoked Cerignola Olives", "description": "Olive Oil, Orange Zest, Fresh Cayenne Pepper, Bay Leaf", "price": "$9" },
+          { "name": "French Onion Soup", "description": "Caramelized Onion, White Wine, Port, Beef Stock, Gruyere, Bagel Crostini (Sesame Seed)", "price": "$12" },
+          { "name": "Chicken Liver Pate", "description": "Butter, Apple, Onions, Garlic, Turmeric, Garam Masala with Sourdough Toast", "price": "$17" },
+          { "name": "Oysters Half Dozen/Dozen", "description": "East Coast, Cocktail Sauce, Mignonette, Fresh Horseradish", "price": "$19/$36" },
+          { "name": "Beetroot and Burrata", "description": "Roasted and Marinated Beets, Olive Oil, Sherry and Cider Vinegar, Spices + Herbs + Maldon Salt", "price": "$25" },
+          { "name": "House Salad", "description": "Boston Lettuce, White Radicchio, Carrots, Radish, Kale, Orange Segments, Russian Dressing", "price": "$16" },
+          { "name": "Kale Caesar Salad", "description": "Baby Kale, Dbl Smoke Bacon, Dried Cranberry, Sourdough Crouton, Parmesan, House Caesar Dressing (Eggs, Dijon, Anchovy)", "price": "$17" },
+          { "name": "Shaved Brussel Sprout Salad", "description": "Farro, Ricotta Salata, Honey Mustard Vinaigrette, Pickled Apricots, Red Onion", "price": "$16" },
+          { "name": "Spicy Chinatown \"Style\" Calamari", "description": "Fried, Buttermilk Marinated Calamari, Chili, Honey Szechwan Sauce", "price": "$20" },
+          { "name": "Trout Gravlax Carpaccio", "description": "House Beet Cured Gravlax, Moroccan Olives, Sundried Tomatoes, Capers, Chives, Pickled Onions, Olive Oil, House Sourdough Bagel, Crème Fraiche", "price": "$20" },
+          { "name": "Hummus + Pita", "description": "Chickpeas, Tahini, Olive Oil, Parsley, Lemon Juice, Zaatar, Preserved Lemon, Hot Pepper Spread", "price": "$21" }
+        ],
+        "pizzas": [
+          { "name": "Margherita", "description": "Tomato Sauce, Fior Di Latte, Basil", "price": "$18" },
+          { "name": "Pepperoni", "description": "Tomato Sauce, Fior Di Latte, Pepperoni (Ezzo Natural)", "price": "$20" },
+          { "name": "Pancetta And Smoked Provolone", "description": "Fior Di Latte, Squash, Pancetta, Smoked Provolone", "price": "$22" },
+          { "name": "Capricciosa", "description": "Tomato Sauce, Fior Di Latte, Ham, Mushroom, Artichoke, Moroccan Black Olives", "price": "$23" },
+          { "name": "Porcini", "description": "Fior Di Latte, Squash, Porcini and Radicchio, Parmesan", "price": "$22" },
+          { "name": "Truffle and Sausage", "description": "Fior Di Latte, House Sausage, Tartufata, Parsley", "price": "$24" },
+          { "name": "Chanterelles Supreme Deluxe", "description": "Chanterelles Mushrooms, Ezzo Pepperoni, Green Peppers, Tomato Sauce, Fior Di Latte", "price": "$24" },
+          { "name": "Spicy Soppressata", "description": "Tomato Sauce, Fior Di Latte, Hot Soppressata, Moroccan Black Olives, Chilies", "price": "$22" },
+          { "name": "Marinara", "description": "Tomato Sauce, Rappini, Capers, Confit Garlic, Olive Oil", "price": "$19 (VEGAN)" },
+          { "name": "Flammkuchen", "description": "Crème Fraiche, Bacon, Onion, Gruyere, Parsley, Nutmeg, Black Pepper", "price": "$22" },
+          { "name": "Hawaiian", "description": "Tomato Sauce, Fior Di Latte, Dbl Smoked Bacon, Pineapple, Chilies, Basil", "price": "$22" },
+          { "name": "Roasted Eggplant and Ricotta Salata", "description": "Tomato Sauce, Fior Di Latte, Zucchini Flowers, Pancetta, White Sauce", "price": "$22" },
+          { "name": "Fresh Ricotta", "description": "Tomato Sauce, Fresh Ricotta, Basil, Maldon Salt", "price": "$19" },
+          { "name": "Castle Franco and Truffle", "description": "Roasted White Radicchio, Truffle, Flor Di Latte, Smoked Provolone,  Parsley", "price": "$21" },
+{ "name": "Porcini, Potato and Ham", "description": "Prosciutto Crudo, Potato Puree, Porcini, Fior Di Late, Parsley", "price": "$22"}
+       ],
+        "dinner": [
+          { "name": "Fish and Chips", "description": "Cod, Loin, Beef Batter Chips, Sourdough Beer Batter, Pea Puree, Tartar", "price": "$24" },
+          { "name": "Lobster Roll", "description": "Lobster, Avocado, Mayo, Herbs, Lemon Juice, Radish and Lettuce", "price": "$25" },
+          { "name": "Rainbow Trout", "description": "Celery Root Puree, Braised Leeks and Heirloom Carrots, Parsley and Capers", "price": "$32" },
+          { "name": "Pork Belly Lettuce Wrap", "description": "Boston Lettuce, Crispy Braised Pork Belly, Radishes, Carrots, Cucumber, Pickled Onions, Chili Glaze", "price": "$23" },
+          { "name": "Toad in the Hole", "description": "Giant Yorkshire Pudding, House Cumberland Sausage, Caramelized Onions, Gravy", "price": "$22" },
+          { "name": "Bacon Cheeseburger", "description": "Dbl Smoked Bacon, Cheddar Cheese, Lettuce, Onion, Pickle, Tomato, Fries", "price": "$21" },
+          { "name": "Half Roast Chicken Dinner", "description": "Confit Fingerling Potatoes, Southern Greens (Dandelion) and Gravy", "price": "$23" },
+          { "name": "Ricotta Gnocchi", "description": "Tomato Sauce, Parmesan, Basil", "price": "$21" },
+          { "name": "Steak Frites", "description": "10 oz Angus Striploin, Hand Cut Russet Fries, Red Wine Sauce", "price": "$40" },
+          { "name": "Porcini in the Hole", "description": "Giant Yorkshire Pudding, Caramelized Onion (Veg) Gravy, Porcini Mushroom", "price": "$22" },
+          { "name": "Wild Mushroom Lettuce Wrap", "description": "Boston Lettuce, Bluefoot and Chanterelles Mushrooms, Radishes, Carrots, Cucumber, Pickled Onions, Chili Veg Demi, Glaze", "price": "$19" },
+          { "name": "Veggie Burger", "description": "Bean, Oat, Lentil, Quinoa, Mixed Mushroom, Miso", "price": "$19" },
+          { "name": "Shepherd's Pie", "description": "Braised Lamb, Onions, Carrot, Duchess Potatoes, Gravy", "price": "$23" },
+          { "name": "Club Sandwich", "description": "Pulled Chicken, Sourdough Bread, Mayo, Dbl Smoked Bacon, Lettuce, Tomato, Fries", "price": "$21" }
+        ],
+        "dessert": [
+          { "name": "Apple Crumble", "description": "Ontario Apples, Oats, Butter, Creme Fraiche", "price": "$12" },
+          { "name": "Chocolate Pot De Crème", "description": "Callebaut Dark Chocolate Pudding", "price": "$12" },
+          { "name": "Sour Cream Panna Cotta", "description": "Lemon Zest, Vanilla Fruit Compote", "price": "$12" },
+          { "name": "Sticky Toffee", "description": "Warm Date Pudding, Toffee Sauce", "price": "$11" },
+          { "name": "Brownie Smores", "description": "Double Chocolate Brownie, Wood Fired Marshmallow, Graham Cracker", "price": "$12" }
+  ],
+        "specials": [
+          { "name": "Sunday", "price": "Sunday Roast" },
+          { "name": "Monday", "price": "Pizzas Two for $28" },
+          { "name": "Tuesday", "price": "$1.50 a Shuck Oysters" },
+          { "name": "Thursday", "price": "Burger and a Beer Combo" }
+  ]
+
+    }
