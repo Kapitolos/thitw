@@ -44,26 +44,26 @@
 { "name": "Porcini, Potato and Ham", "description": "Prosciutto Crudo, Potato Puree, Porcini, Fior Di Late, Parsley", "price": "$22"}
        ],
         "dinner": [
-          { "name": "Fish and Chips", "description": "Cod, Loin, Beef Batter Chips, Sourdough Beer Batter, Pea Puree, Tartar", "price": "$24" },
+          { "name": "Fish and Chips", "description": "Cod, Loin, Beef Batter Chips, Sourdough Beer Batter, Pea Puree, Tartar", "price": "$25" },
           { "name": "Lobster Roll", "description": "Lobster, Avocado, Mayo, Herbs, Lemon Juice, Radish and Lettuce", "price": "$25" },
-          { "name": "Rainbow Trout", "description": "Celery Root Puree, Braised Leeks and Heirloom Carrots, Parsley and Capers", "price": "$32" },
-          { "name": "Pork Belly Lettuce Wrap", "description": "Boston Lettuce, Crispy Braised Pork Belly, Radishes, Carrots, Cucumber, Pickled Onions, Chili Glaze", "price": "$23" },
-          { "name": "Toad in the Hole", "description": "Giant Yorkshire Pudding, House Cumberland Sausage, Caramelized Onions, Gravy", "price": "$22" },
-          { "name": "Bacon Cheeseburger", "description": "Dbl Smoked Bacon, Cheddar Cheese, Lettuce, Onion, Pickle, Tomato, Fries", "price": "$21" },
-          { "name": "Half Roast Chicken Dinner", "description": "Confit Fingerling Potatoes, Southern Greens (Dandelion) and Gravy", "price": "$23" },
-          { "name": "Ricotta Gnocchi", "description": "Tomato Sauce, Parmesan, Basil", "price": "$21" },
-          { "name": "Steak Frites", "description": "10 oz Angus Striploin, Hand Cut Russet Fries, Red Wine Sauce", "price": "$40" },
+          { "name": "Rainbow Trout", "description": "Celery Root Puree, Braised Leeks and Heirloom Carrots, Parsley and Capers", "price": "$33" },
+          { "name": "Pork Belly Lettuce Wrap", "description": "Boston Lettuce, Crispy Braised Pork Belly, Radishes, Carrots, Cucumber, Pickled Onions, Chili Glaze", "price": "$24" },
+          { "name": "Toad in the Hole", "description": "Giant Yorkshire Pudding, House Cumberland Sausage, Caramelized Onions, Gravy", "price": "$23" },
+          { "name": "Bacon Cheeseburger", "description": "Dbl Smoked Bacon, Cheddar Cheese, Lettuce, Onion, Pickle, Tomato, Fries", "price": "$23" },
+          { "name": "Half Roast Chicken Dinner", "description": "Confit Fingerling Potatoes, Southern Greens (Dandelion) and Gravy", "price": "$29" },
+          { "name": "Ricotta Gnocchi", "description": "Tomato Sauce, Parmesan, Basil", "price": "$19" },
+          { "name": "Steak Frites", "description": "10 oz Angus Striploin, Hand Cut Russet Fries, Red Wine Sauce", "price": "$43" },
           { "name": "Porcini in the Hole", "description": "Giant Yorkshire Pudding, Caramelized Onion (Veg) Gravy, Porcini Mushroom", "price": "$22" },
-          { "name": "Wild Mushroom Lettuce Wrap", "description": "Boston Lettuce, Bluefoot and Chanterelles Mushrooms, Radishes, Carrots, Cucumber, Pickled Onions, Chili Veg Demi, Glaze", "price": "$19" },
-          { "name": "Veggie Burger", "description": "Bean, Oat, Lentil, Quinoa, Mixed Mushroom, Miso", "price": "$19" },
-          { "name": "Shepherd's Pie", "description": "Braised Lamb, Onions, Carrot, Duchess Potatoes, Gravy", "price": "$23" },
-          { "name": "Club Sandwich", "description": "Pulled Chicken, Sourdough Bread, Mayo, Dbl Smoked Bacon, Lettuce, Tomato, Fries", "price": "$21" }
+          { "name": "Wild Mushroom Lettuce Wrap", "description": "Boston Lettuce, Bluefoot and Chanterelles Mushrooms, Radishes, Carrots, Cucumber, Pickled Onions, Chili Veg Demi, Glaze", "price": "$23" },
+          { "name": "Veggie Burger", "description": "Bean, Oat, Lentil, Quinoa, Mixed Mushroom, Miso", "price": "$21" },
+          { "name": "Shepherd's Pie", "description": "Braised Lamb, Onions, Carrot, Duchess Potatoes, Gravy", "price": "$25" },
+          { "name": "Club Sandwich", "description": "Pulled Chicken, Sourdough Bread, Mayo, Dbl Smoked Bacon, Lettuce, Tomato, Fries", "price": "$22" }
         ],
         "dessert": [
           { "name": "Apple Crumble", "description": "Ontario Apples, Oats, Butter, Creme Fraiche", "price": "$12" },
           { "name": "Chocolate Pot De Crème", "description": "Callebaut Dark Chocolate Pudding", "price": "$12" },
           { "name": "Sour Cream Panna Cotta", "description": "Lemon Zest, Vanilla Fruit Compote", "price": "$12" },
-          { "name": "Sticky Toffee", "description": "Warm Date Pudding, Toffee Sauce", "price": "$11" },
+          { "name": "Sticky Toffee", "description": "Warm Date Pudding, Toffee Sauce", "price": "$12" },
           { "name": "Brownie Smores", "description": "Double Chocolate Brownie, Wood Fired Marshmallow, Graham Cracker", "price": "$12" }
   ],
         "specials": [
