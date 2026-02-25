@@ -11,27 +11,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="The Hole in the Wall - A cozy bar and restaurant in the heart of the Junction, Toronto. Craft beers, extensive Scotch collection, wood-fired pizzas, and warm atmosphere."
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#2b2b2b" />
+    <title>The Hole in the Wall - Bar & Restaurant | The Junction, Toronto</title>
+    <meta name="description" content="The Hole in the Wall - A cozy bar and restaurant in the heart of the Junction, Toronto. Craft beers, extensive Scotch collection, wood-fired pizzas, and warm atmosphere. 2867A Dundas St W. Open late 7 days a week." />
+    <link rel="canonical" href="https://theholeinthewallto.ca/" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>The Hole in the Wall - Bar & Restaurant | Toronto</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://theholeinthewallto.ca/" />
+    <meta property="og:title" content="The Hole in the Wall - Bar & Restaurant | The Junction, Toronto" />
+    <meta property="og:description" content="A cozy bar and restaurant in the Junction, Toronto. Craft beers, Scotch, wood-fired pizzas. 2867A Dundas St W. Open late 7 days a week." />
+    <meta property="og:image" content="https://theholeinthewallto.ca/logo.jpg" />
+    <meta property="og:image:alt" content="The Hole in the Wall - Bar and Restaurant in the Junction, Toronto" />
+    <meta property="og:site_name" content="The Hole in the Wall" />
+    <meta property="og:locale" content="en_CA" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Hole in the Wall - Bar & Restaurant | The Junction, Toronto" />
+    <meta name="twitter:description" content="A cozy bar and restaurant in the Junction, Toronto. Craft beers, Scotch, wood-fired pizzas. Open late 7 days a week." />
+    <meta name="twitter:image" content="https://theholeinthewallto.ca/logo.jpg" />
+    <meta name="twitter:image:alt" content="The Hole in the Wall - Bar and Restaurant in the Junction, Toronto" />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- JSON-LD structured data for local SEO and rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "The Hole in the Wall",
+      "description": "A cozy bar and restaurant in the heart of the Junction, Toronto. Craft beers, extensive Scotch collection, wood-fired pizzas, and warm atmosphere.",
+      "url": "https://theholeinthewallto.ca",
+      "image": "https://theholeinthewallto.ca/logo.jpg",
+      "telephone": "+1-416-760-7041",
+      "email": "theholeinthewallto@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2867A Dundas Street West",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.6712,
+        "longitude": -79.4689
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "17:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "17:00", "closes": "00:00" }
+      ],
+      "servesCuisine": ["American", "Pizza"],
+      "priceRange": "$$"
+    }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
