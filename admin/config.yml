@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Kapitolos/thitw
   branch: alt # Change to 'master' if you want to edit the master branch instead
-  base_url: https://theholeinthewallto.ca # Your GitHub Pages URL
+  base_url: https://theholeinthewallto.ca
   auth_type: pkce # Use PKCE for GitHub OAuth
 
 media_folder: public # Media files will be stored in the public folder

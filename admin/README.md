@@ -8,8 +8,8 @@
    - Click "New OAuth App"
    - Fill in:
      - **Application name**: "THITW CMS" (or any name)
-     - **Homepage URL**: `https://kapitolos.github.io/thitw`
-     - **Authorization callback URL**: `https://kapitolos.github.io/thitw/admin/`
+     - **Homepage URL**: `https://theholeinthewallto.ca`
+     - **Authorization callback URL**: `https://theholeinthewallto.ca/admin/`
    - Click "Register application"
    - **Copy the Client ID** (you'll need this)
 
@@ -17,10 +17,10 @@
    - The config is already set up, but verify:
      - `repo: Kapitolos/thitw` matches your repo
      - `branch: alt` matches the branch you want to edit
-     - `base_url: https://kapitolos.github.io/thitw` matches your GitHub Pages URL
+     - `base_url: https://theholeinthewallto.ca` matches your custom domain
 
 3. **Access the admin panel:**
-   - After deploying, visit: `https://kapitolos.github.io/thitw/admin/`
+   - After deploying, visit: `https://theholeinthewallto.ca/admin/`
    - Click "Login with GitHub"
    - Authorize the app
    - You'll be able to edit the menu!

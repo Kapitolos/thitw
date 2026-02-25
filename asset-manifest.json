@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/thitw/static/css/main.ba4ae093.css",
-    "main.js": "/thitw/static/js/main.066ca8a3.js",
-    "static/js/453.a5be03f3.chunk.js": "/thitw/static/js/453.a5be03f3.chunk.js",
-    "static/media/chalk.jpg": "/thitw/static/media/chalk.89f4c97d3dcfa68ca47e.jpg",
-    "static/media/pizzafire.JPG": "/thitw/static/media/pizzafire.c2038d12ad180e390264.JPG",
-    "static/media/lights.JPG": "/thitw/static/media/lights.ba6fdf6dd383c5cb9a7d.JPG",
-    "index.html": "/thitw/index.html",
-    "main.ba4ae093.css.map": "/thitw/static/css/main.ba4ae093.css.map",
-    "main.066ca8a3.js.map": "/thitw/static/js/main.066ca8a3.js.map",
-    "453.a5be03f3.chunk.js.map": "/thitw/static/js/453.a5be03f3.chunk.js.map"
+    "main.css": "/static/css/main.5831763b.css",
+    "main.js": "/static/js/main.155f9bd9.js",
+    "static/js/453.a5be03f3.chunk.js": "/static/js/453.a5be03f3.chunk.js",
+    "static/media/chalk.jpg": "/static/media/chalk.89f4c97d3dcfa68ca47e.jpg",
+    "static/media/pizzafire.JPG": "/static/media/pizzafire.c2038d12ad180e390264.JPG",
+    "static/media/lights.JPG": "/static/media/lights.ba6fdf6dd383c5cb9a7d.JPG",
+    "index.html": "/index.html",
+    "main.5831763b.css.map": "/static/css/main.5831763b.css.map",
+    "main.155f9bd9.js.map": "/static/js/main.155f9bd9.js.map",
+    "453.a5be03f3.chunk.js.map": "/static/js/453.a5be03f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba4ae093.css",
-    "static/js/main.066ca8a3.js"
+    "static/css/main.5831763b.css",
+    "static/js/main.155f9bd9.js"
   ]
 }
