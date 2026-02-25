@@ -1,17 +1,17 @@
 body {
   background-image: url(../public/lights.JPG);
-  background-size: 100%;
-  /* background-size: cover; */
+  background-size: cover; /* Fill viewport on all devices (desktop, tablet, iPad) - no dead space */
   background-position: center;
   background-attachment: fixed; /* Ensures the image stays fixed as you scroll */
   background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure body fills viewport so background has full area to cover */
   color: #f0e5d8; /* Ensures all text is readable */
 }
 
 /* Prevent layout shift when modals open */
 body.modal-open {
   overflow: hidden;
-  padding-right: 0 !important; /* Prevent Bootstrap's default padding-right */
+  /* padding-right will be set by JavaScript to compensate for scrollbar width */
 }
 
 /* Ensure navbar maintains full width regardless of scrollbar */
@@ -379,6 +379,7 @@ body.modal-open .navbar-custom .nav-link:hover {
   min-height: 400px; /* Fixed minimum height to prevent size changes */
   animation: modalFadeIn 0.2s ease-out;
   position: relative; /* For overlay positioning */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 /* Menu modal specific styling - cream background, black text, no background image */
@@ -841,17 +842,43 @@ body.modal-open .navbar-custom .nav-link:hover {
 
 }
 
+/* Tablet / iPad: vertical column reaches full page height (not applied on mobile) */
+@media (min-width: 577px) and (max-width: 991px) {
+  .vertical-column {
+    min-height: 100vh;
+    height: 100vh;
+  }
+}
+
 .content-area {
   flex: 1;
   margin-left: -300px; /* Negative margin to pull the Hero over the full width */
 }
 
 @media (min-width: 992px) {
+  /* Lock down modal width on desktop to prevent resizing when tabs are clicked */
+  .modal {
+    --bs-modal-width: 800px !important;
+  }
+
+  .modal-dialog {
+    width: 800px !important;
+    max-width: 800px !important;
+    min-width: 800px !important;
+  }
+
+  .modal-dialog.modal-lg,
+  .modal-lg .modal-dialog {
+    width: 800px !important;
+    max-width: 800px !important;
+    min-width: 800px !important;
+    --bs-modal-width: 800px !important;
+  }
+
   .modal-lg, .modal-xl {
       margin-top: 3%;
       --bs-modal-width: 800px;
   }
-  
   /* Ensure all modals (menu, about, contact) have the same top margin on desktop */
   .modal-dialog.centered,
   .modal-dialog {
@@ -893,14 +920,35 @@ body.modal-open .navbar-custom .nav-link:hover {
     min-height: 60vh;
     max-height: 75vh;
   }
+
+  .modal-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Prevent Container from affecting modal width on desktop */
+  .modal-body .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
 }
 
 
 @media (max-width: 576px) {
+  /* Galaxy/Android: use dynamic viewport height so no white space at bottom */
+  html, body {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
   body {
     background-size: cover !important;
+    background-attachment: scroll; /* Prevents background resizing/expanding when scrolling on mobile */
+    background-color: #1a1a1a; /* Fallback if image doesn't reach edge (e.g. Galaxy) - no white */
   }
-  
+
   .vertical-column {
     max-width: 90%; /* Allow the column to take up more space on small screens */
     margin: 0 auto; /* Center it horizontally */

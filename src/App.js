@@ -13,29 +13,43 @@ function App() {
   const handleSectionChange = (section) => setActiveSection(section);
   const handleClose = () => setActiveSection('');
 
-  // Prevent Bootstrap from adding padding-right to body when modals open
+  // Compensate for scrollbar width when modals open to prevent layout shift
   useEffect(() => {
-    const preventModalPadding = () => {
+    const handleModalOpen = () => {
       if (document.body.classList.contains('modal-open')) {
-        document.body.style.paddingRight = '0';
+        // Calculate scrollbar width before it disappears
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        if (scrollbarWidth > 0) {
+          // Add padding equal to scrollbar width to maintain layout
+          document.body.style.paddingRight = `${scrollbarWidth}px`;
+        }
+      } else {
+        // Remove padding when modal closes
+        document.body.style.paddingRight = '';
       }
     };
 
-    // Watch for modal-open class on body and remove padding
-    const observer = new MutationObserver(() => {
-      preventModalPadding();
+    // Watch for modal-open class on body
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          handleModalOpen();
+        }
+      });
     });
 
     observer.observe(document.body, {
       attributes: true,
-      attributeFilter: ['class', 'style']
+      attributeFilter: ['class']
     });
 
     // Check initial state
-    preventModalPadding();
+    handleModalOpen();
 
     return () => {
       observer.disconnect();
+      // Clean up on unmount
+      document.body.style.paddingRight = '';
     };
   }, []);
 
