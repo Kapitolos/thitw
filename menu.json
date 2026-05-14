@@ -70,7 +70,9 @@
           { "name": "Sunday", "price": "Sunday Roast" },
           { "name": "Monday", "price": "Pizzas Two for $28" },
           { "name": "Tuesday", "price": "$1.50 a Shuck Oysters" },
-          { "name": "Thursday", "price": "Burger and a Beer Combo" }
+          { "name": "Wednesday", "price": 
+"Burger and a Beer Combo"},
+          { "name": "Thursday", "price": "Fried Chicken Sandwich" }
   ]
 
     }
